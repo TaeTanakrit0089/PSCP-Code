@@ -1,8 +1,9 @@
 '''Saul Goodman'''
 def huell():
     '''Saul Goodman'''
-    age, weight, usedto, approve = int(input()), int(input()), int(input()), True
-    if age in range(60,71) or age == 17:
+    age, weight, usedto, approve = int(
+        input()), int(input()), int(input()), True
+    if age in range(60, 71) or age == 17:
         if input() == 'False':
             approve = False
     condi1 = weight >= 45
