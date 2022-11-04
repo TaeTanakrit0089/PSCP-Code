@@ -1,33 +1,24 @@
-"Impostor"
-import json
-def main():
-    "Impostor"
-    player = {}
-    player2 = {}
-    play_list = []
-    impos = 0
-    while True:
-        text = input()
-        if text == "Start":
-            break
-        elif text != "Start":
-            text2 = json.loads(text)
-            player.update(text2)
-    while True:
-        text3 = input()
-        if text3 == "End":
-            break
-        play_list.append(text3)
-    
-    for x in play_list:
-        player2.update({x:player.pop(x)})
-    
-    for i in player:
-        if player[i] == "Impostor":
-            impos += 1
-    print(impos, "Impostor Remains")
-    print("***Alive***")   
-    for i in player:
-        print(i, ":", player[i])
+print(("-"*40).rjust(79, ' '))
+print(("Pratice1").rjust(63, ' '))
+print(("-"*40).rjust(79, ' '))
 
-main()
+No = input("No = ")
+Name = input("Name = ")
+Grade = float(input("Grade = "))
+Class = input("Class = ")
+
+print("-"*70)
+print("My no. is {} and my name is {}. I have grade {} and in class {}".format(
+    No, Name, Grade, Class))
+print("-"*70)
+
+A = int(input("A= "))
+B = int(input("B= "))
+C = int(input("C= "))
+
+print("-"*70)
+
+print("A+B-c= ", int(A+B-C))
+print("A-(B+C)= ", int(A-(B+C)))
+print("A/C*B= ", int((A/C*B)))
+print("-"*50)
