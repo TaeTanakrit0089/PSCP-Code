@@ -1,19 +1,30 @@
-"BreachTheDoor"
+"""SMS"""
+ 
+ 
 def main():
-    "IAM503ROT8OOSS001LKFD"
-    txt = input() + ' '
-    txt_list = []
-    txt_tst = ""
-    pass_list = []
-    for i in txt:
-        if i.isalpha():
-            txt_tst += i
+    """beom"""
+    inp = int(input())
+    llist = ''
+    num = {
+        2: ["A", "B", "C"],
+        3: ["D", "E", "F"],
+        4: ["G", "H", "I"],
+        5: ["J", "K", "L"],
+        6: ["M", "N", "O"],
+        7: ["P", "Q", "R", "S"],
+        8: ["T", "U", "V"],
+        9: ["W", "X", "Y", "Z"]
+    }
+    for _ in range(0, inp):
+        numm = int(input())
+        alphabet = int(input())
+        if numm == 1:
+            llist = llist[:-alphabet]
         else:
-            if txt_tst != "":
-                txt_list.append(txt_tst)
-                txt_tst = ""
-    for i in txt_list:
-        if len(i) > 6:
-            pass_list.append(i)
-    print(*pass_list)
+            alphabet = alphabet % len(num[alphabet])
+            llist += num[numm][alphabet-1]
+    if llist == '':
+        print("null")
+    else:
+        print(llist)
 main()
