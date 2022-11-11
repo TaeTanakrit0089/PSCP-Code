@@ -1,7 +1,7 @@
-'''Saul Goodman'''
+'''We're here to make HUELL happy'''
 import json
-def huell():
-    '''Saul Goodman'''
+def reasonably():
+    '''Are you happy'''
     data, node = json.loads(input().replace("'", '"')), input()
     linked, before = data[node], ['']
     while linked != before:
@@ -10,4 +10,4 @@ def huell():
             temp += data[i]
         linked = sorted(list(dict.fromkeys(temp)))
     print(linked)
-huell()
+reasonably()
