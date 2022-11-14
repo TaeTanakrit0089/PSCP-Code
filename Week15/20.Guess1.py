@@ -8,7 +8,7 @@ def huell():
         data.append(temp.split())
         temp = input()
     all_equal = set()
-    data = [[i[0], int(i[1]), define_bool(i[2])] for i in data]
+    data = [[i[0], int(i[1]), i[2]] for i in data]
     data.sort(key=lambda l: l[2], reverse=1)
     for i in data:
         if i[0] == '>':
@@ -18,8 +18,9 @@ def huell():
         else:
             temp = [i[1]]
             all_equal.add(i[1])
-        if i[2]:
-            all_possible.append(temp)
+
+        if i[2] == 'YES':
+            all_possible.append(set(temp))
         else:
             restrict += temp
 
@@ -29,12 +30,6 @@ def huell():
     final_data = final_data.intersection(*all_possible)
 
     print(*final_data)
-
-
-def define_bool(text):
-    if text == 'YES':
-        return True
-    return False
 
 
 huell()
