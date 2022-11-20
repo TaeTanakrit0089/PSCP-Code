@@ -1,6 +1,4 @@
 '''Saul Goodman'''
-
-
 def main():
     '''Saul Goodman'''
     cost_per_bottle = int(input())
