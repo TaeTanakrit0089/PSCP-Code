@@ -1,8 +1,10 @@
-'''Saul Goodman'''
+"""I'm burnin' through the sky, yeah
+200 degrees, that's why they call me Mister Fahrenheit"""
 
 
-def huell():
-    '''Saul Goodman'''
+def dont_stop_me_now():
+    """I'm travelling at the speed of light
+    I wanna make a supersonic man out of you"""
 
 
-huell()
+dont_stop_me_now()
