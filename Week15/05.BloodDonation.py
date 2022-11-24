@@ -9,8 +9,5 @@ def huell():
     condi1 = weight >= 45
     condi2 = (usedto == 0 and age < 55) or usedto > 0
     condi3 = age in range(17, 71)
-    if condi1 and condi2 and condi3 and approve:
-        return 'Yes'
-    return 'No'
-
+    return 'Yes' if condi1 and condi2 and condi3 and approve else 'No'
 print(huell())
