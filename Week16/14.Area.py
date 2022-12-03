@@ -1,2 +1,2 @@
-"""I'm burnin' through the sky, yeah"""
+"""Steve walks warily down the street"""
 print(sum([len(input().replace(' ', '')) for _ in range(int(input()))]))

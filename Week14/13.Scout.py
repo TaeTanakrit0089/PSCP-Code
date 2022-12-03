@@ -3,7 +3,7 @@
 def dont_stop_me_now():
     """I'm travelling at the speed of light
     I wanna make a supersonic man out of you"""
-    npq = sorted(list(map(int, input().split())))
+    npq = list(map(int, input().split()))
     egg_weight = sorted(list(map(int, input().split())))
     result, current_weight = 0, 0
     for _ in range(npq[0]):

@@ -7,10 +7,11 @@ Name = input("Name = ")
 Grade = float(input("Grade = "))
 Class = input("Class = ")
 
-print("-"*70)
-print("My no. is {} and my name is {}. I have grade {} and in class {}".format(
-    No, Name, Grade, Class))
-print("-"*70)
+out_text = "My no. is {} and my name is {}. I have grade {} and in class {}".format(
+    No, Name, Grade, Class)
+print("-"*(len(out_text)+10))
+print(' '*5, out_text, ' '*5, sep='')
+print("-"*(len(out_text)+10))
 
 A = int(input("A= "))
 B = int(input("B= "))
@@ -18,7 +19,7 @@ C = int(input("C= "))
 
 print("-"*70)
 
-print("A+B-c= ", int(A+B-C))
-print("A-(B+C)= ", int(A-(B+C)))
-print("A/C*B= ", int((A/C*B)))
-print("-"*50)
+print("A+B-C = ", int(A+B-C))
+print("A-(B+C) = ", int(A-(B+C)))
+print("A/C*B = ", int((A/C*B)))
+print("-"*70)

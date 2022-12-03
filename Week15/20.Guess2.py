@@ -1,19 +1,33 @@
-"""Steve walks warily down the street"""
-def another_one_bite_the_dust():
-    """With his brim pulled way down low"""
-    year, engine, summer = int(input()), int(input()), 0
-    summer += (min(600, engine)) * 0.5 if engine > 0 else 0
-    summer += (min(1800, engine)-600) * 1.5 if engine > 600 else 0
-    summer += (engine - 1800)*4 if engine > 1800 else 0
+'''Saul Goodman'''
 
-    discount = {6: 10, 7: 20, 8: 30, 9: 40}
-    if year in discount:
-        summer *= (100 - discount[year])/100
-    elif year >= 10:
-        summer *= 0.5
-    print('%.2f' % summer)
 
-another_one_bite_the_dust()
+def huell():
+    '''Saul Goodman'''
+    temp, data, result = input(), [], set(range(101))
+    while temp != 'END':
+        sign, num, condi = temp.split()
+        data.append([sign, int(num), True if condi == 'YES' else False])
+        temp = input()
+
+    for current in data:
+        if current[2]:
+            if current[0] == '>':
+                result = {i for i in result if i > current[1]}
+            elif current[0] == '<':
+                result = {i for i in result if i < current[1]}
+            else:
+                result = {i for i in result if i == current[1]}
+        else:
+            if current[0] == '>':
+                result = {i for i in result if i <= current[1]}
+            elif current[0] == '<':
+                result = {i for i in result if i >= current[1]}
+            else:
+                result = {i for i in result if i != current[1]}
+    print(*sorted(result))
+
+
+huell()
 
 # ⠀⠀⠀⠀⠀⠀⢹⣄⣿⣦⣼⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 # ⠀⠀⠀⠀⠀⠀⢨⣿⣿⣿⣿⠿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

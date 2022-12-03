@@ -7,3 +7,5 @@ def freddiemercury(galileo_a, galileo_b):
     else:
         print('%d %d' % (rabbit, birds))
 freddiemercury(int(input()), int(input()))
+
+

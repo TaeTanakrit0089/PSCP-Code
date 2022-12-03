@@ -10,3 +10,4 @@ def better_drink_coke(percan, cap, dispercan, atleast):
     possible_promo, can_left = atleast // cap, atleast % cap
     return percan + (promo_range * possible_promo) + (percan * can_left)
 print('%d' %better_drink_coke(float(input()), int(input()), float(input()), int(input())))
+

@@ -1,17 +1,36 @@
 """Steve walks warily down the street"""
+
+
 def another_one_bite_the_dust():
     """With his brim pulled way down low"""
-    year, engine, summer = int(input()), int(input()), 0
-    summer += (min(600, engine)) * 0.5 if engine > 0 else 0
-    summer += (min(1800, engine)-600) * 1.5 if engine > 600 else 0
-    summer += (engine - 1800)*4 if engine > 1800 else 0
+    time = {}
+    for i in range(24):
+        for j in range(60):
+            time['%02d.%02d' % (i, j)] = 0
+    arrive, depart = do_text_thing(), do_text_thing()
+    schedule = [[(arrive[i], depart[i]), False] for i in range(len(arrive))]
 
-    discount = {6: 10, 7: 20, 8: 30, 9: 40}
-    if year in discount:
-        summer *= (100 - discount[year])/100
-    elif year >= 10:
-        summer *= 0.5
-    print('%.2f' % summer)
+    temp = 0
+    for i in schedule:
+        if i[0][1] < i[0][0]:
+            temp += 1
+    for current_time, _ in time.items():
+        for data in schedule:
+            if data[0][0] == current_time:
+                data[1] = True
+            time[current_time] += 1 if data[1] else 0
+            if data[0][1] == current_time:
+                data[1] = False
+
+    print(max(time.values()) + temp)
+
+
+def do_text_thing():
+    """Ain't no sound but the sound of his feet"""
+    textin = input().replace(',', '').replace(
+        '[', '').replace(']', '').split()
+    return sorted(textin)
+
 
 another_one_bite_the_dust()
 
@@ -55,4 +74,3 @@ another_one_bite_the_dust()
 # ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠀⠀⠀⠀⠀⠀⠀⠀⠙⠓⠋⠀⠀⣀⣠⡶⠋⠀⣼⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡏⠀
 # ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⢫⣿⢿⡀⠀⣠⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠇⠀
 # ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠘⠊⠙⠙⠚⠛⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠀⠀
-
